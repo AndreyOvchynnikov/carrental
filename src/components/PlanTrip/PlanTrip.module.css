@@ -1,0 +1,79 @@
+@import '../../styles/variables.css';
+
+.planSection {
+  background-color: var(--main-bg-color);
+  padding: 5.3rem 0;
+}
+
+.planContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.planContainerTitle {
+  margin: 0 auto;
+  text-align: center;
+  color: var(--main-text-color);
+}
+
+.planContainerTitle h3 {
+  font-size: var(--h3-size);
+  font-family: var(--text-font);
+  font-weight: 500;
+}
+
+.planContainerTitle h2 {
+  font-size: var(--h2-size);
+  font-family: var(--title-font);
+  margin: 1.3rem 0 3rem 0;
+}
+
+.planContainerBoxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  margin-top: 3.7rem;
+  padding: 0 3rem;
+}
+
+@media (max-width: 1021px) {
+  .planContainerBoxes {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .planContainerBoxes {
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+  }
+}
+
+.planContainerBoxesBox {
+  text-align: center;
+  padding: 1rem 6rem;
+}
+
+@media (max-width: 500px) {
+  .planContainerBoxesBox {
+    padding: 1rem 1rem;
+  }
+}
+
+.planContainerBoxesBox img {
+  width: 17rem;
+  height: auto;
+}
+
+.planContainerBoxesBox h3 {
+  font-size: var(--h3-size);
+  margin-bottom: 1rem;
+}
+
+.planContainerBoxesBox p {
+  font-size: var(--p-size);
+  font-family: var(--text-font);
+  color: var(--secondary-text-color);
+  line-height: 1.43;
+}

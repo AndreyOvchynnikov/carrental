@@ -1,0 +1,227 @@
+@import '../../styles/variables.css';
+ 
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9999999999999;
+  top: 0;
+  right: 0;
+}
+.successMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 30rem;
+    min-height: 12rem;
+    padding: 2rem;
+    background-color: var(--main-bg-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999999999999;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    color: var(--main-text-color);
+    text-align: center;
+}
+.successMessage p {
+    flex-grow: 1;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.successMessage button {
+  background-color: var(--main-theme-color);
+  color: var(--main-bg-color);
+  padding: 1.5rem 4rem;
+  border-radius: 3px;
+  border: transparent;
+  cursor: pointer;
+}
+
+.modalOverlay {
+  composes: overlay;
+  z-index: 999999999;
+}
+
+.bookingModal {
+  flex-direction: column;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 999999999999;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 83rem;
+  height: 100vh;
+  border: 2px solid white;
+  background-color: rgb(255, 255, 255);
+  padding-right: 2px;
+  color: var(--main-text-color);
+}
+
+@media (max-width: 800px) {
+  .bookingModal {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .bookingModal {
+    top: 50%;
+  }
+}
+
+.bookingModalTitle {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: var(--main-theme-color);
+  color: white;
+  align-items: center;
+}
+
+.bookingModalTitle h2 {
+  font-size: var(--h3-size);
+  text-transform: uppercase;
+}
+
+.bookingModalTitle svg {
+  cursor: pointer;
+}
+
+.bookingModalMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 3rem;
+  background-color: #ffeae6;
+}
+
+.bookingModalMessage h4 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--main-theme-color);
+}
+
+.bookingModalMessage p {
+  font-size: 1.7rem;
+  color: #777777;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.bookingModalCarInfo {
+  background-color: var(--main-bg-color);
+  padding: 3rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgba(119, 119, 119, 0.6235294118);
+}
+
+@media (max-width: 650px) {
+  .bookingModalCarInfo {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.datesDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.datesDiv h5 {
+  font-size: 1.8rem;
+  color: var(--main-theme-color);
+}
+
+.bookingModalCarInfoDates {
+  gap: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+  display: flex;
+}
+
+.bookingModalCarInfoDates label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.inputSpan {
+  font-weight: normal;
+  color: #777777;
+}
+.inputTime {
+  text-align: center;
+  width: 8rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 0px;
+  color: #777777;
+  font-family: var(--title-font);
+}
+.bookingModalCarInfoDates div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  
+}
+.bookingModalCarInfoDates div h6 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 650px) {
+  .bookingModalCarInfoDates {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.bookingModalCarInfoModel {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (max-width: 650px) {
+  .bookingModalCarInfoModel {
+    margin-top: 3.5rem;
+  }
+}
+
+.bookingModalCarInfoModel h5 {
+  font-size: 1.8rem;
+  color: var(--main-theme-color);
+}
+
+.bookingModalCarInfoModel h5 span {
+  color: var(--main-text-color);
+}
+
+.bookingModalCarInfoModel img {
+  width: 100%;
+  height: auto;
+}
+.bookingModalPersonInfo {
+  padding: 3rem 3rem;
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.bookingModalPersonInfo h4 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: var(--main-theme-color);
+  margin-bottom: 2rem;
+}

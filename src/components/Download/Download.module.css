@@ -1,0 +1,75 @@
+@import '../../styles//variables.css';
+
+.downloadSection {
+  background-image: url("../../images/banners/bg02.png");
+  background-color: var(--secondary-bg-color);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 10rem 0;
+}
+
+@media (max-width: 700px) {
+  .downloadSection {
+    background-image: none;
+  }
+}
+
+.downloadText {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 55rem;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .downloadText {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.downloadText h2 {
+  font-size: var(--h2-size);
+  color: var(--main-text-color);
+}
+
+.downloadText p {
+  font-size: var(--p-size);
+  color: var(--secondary-text-color);
+  font-family: var(--text-font);
+  line-height: 1.5;
+}
+
+.downloadTextBtns {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 700px) {
+  .downloadTextBtns {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .downloadTextBtns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.downloadTextBtns img {
+  width: 40%;
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .downloadTextBtns img {
+    width: 22rem;
+  }
+}

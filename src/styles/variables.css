@@ -1,0 +1,15 @@
+ :root {
+  --main-text-color: #010103;
+  --main-theme-color: #ff4d30;
+  --secondary-text-color: #706f7b;
+  --main-bg-color: #ffffff;
+  --secondary-bg-color: #f8f8f8;
+  --title-font: "Poppins", sans-serif;
+  --text-font: "Rubik", sans-serif;
+  --h1-size: 5.2rem;
+  --h2-size: 4.2rem;
+  --h3-size: 2.4rem;
+  --h4-size: 2.2rem;
+  --p-size: 1.6rem;
+  --input-text-size: 1.4rem;
+}

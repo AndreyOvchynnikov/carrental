@@ -1,0 +1,156 @@
+@import '../../styles/variables.css';
+
+.modelsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10rem 0;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.carBox {
+  border: 1px solid #d5d5d5;
+  border-radius: 0.3rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.carImgBox {
+  width: 100%;
+  height: auto;
+  border-radius: 0.3rem;
+}
+
+.carImgBox img {
+  width: 100%;
+  height: 27rem;
+}
+
+.carDescription {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--main-text-color);
+}
+
+.namePrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.namePart {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.5rem;
+  min-height: 6rem;
+}
+
+.namePart p {
+  font-size: var(--h3-size);
+  font-weight: 700;
+}
+
+.namePart span {
+  display: flex;
+  gap: 0.4rem;
+}
+.namePart svg {
+  fill: #ffc933;
+  color: #ffc933;
+} 
+
+.pricePart {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.pricePart h4 {
+  font-size: 2.8rem;
+}
+
+.pricePart p {
+  font-size: var(--p-size);
+}
+
+.carDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+  column-gap: 4rem;
+  margin-top: 2.5rem;
+  margin: 2rem auto;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.carDetails p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #777777;
+  text-align: left;
+  margin-left: 1rem;
+}
+.carDetail {
+    display: flex;
+}
+.carDetails svg {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #777777;
+  text-align: left;
+}
+.pRight {
+    margin-right: 1rem;
+}
+.carButton {
+  background-color: var(--main-theme-color);
+  padding: 1.8rem 3rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
+  transition: all 0.3s;
+  border: 2px solid var(--main-theme-color);
+  font-size: 1.8rem;
+  font-family: var(--title-font);
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+}
+
+.carButton:hover {
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.6);
+  background-color: #fa4226;
+}
+
+@media screen and (min-width: 400px) {
+  .carBox {
+    width: 35rem;
+  }
+  .carDescription {
+    padding: 2rem 3rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  
+  .modelsWrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+}
+
+
+
+
+
+
+

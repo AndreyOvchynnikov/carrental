@@ -1,0 +1,51 @@
+@import '../../styles/variables.css';
+
+.pageHeadSection {
+  width: 100%;
+  height: 41rem;
+  background-image: url("/src/images/hero/heroes-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.pageHeadOverlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.92);
+}
+
+.pageHeadText {
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  position: relative;
+  width: 100%;
+  height: 41rem;
+  justify-content: center;
+  color: var(--main-text-color);
+}
+
+.pageHeadText h3 {
+  font-size: 3.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.pageHeadText p {
+  font-size: var(--p-size);
+  font-weight: 600;
+}
+
+.pageHeadText p a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.pageHeadText p a:hover {
+  color: var(--main-theme-color);
+}

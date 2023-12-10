@@ -1,0 +1,81 @@
+@import '../../styles/variables.css';
+
+.pickSection {
+  padding: 10rem 0;
+}
+
+.pickContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.pickContainerTitle {
+  margin: 0 auto;
+  text-align: center;
+  color: var(--main-text-color);
+  max-width: 50rem;
+  margin-bottom: 5rem;
+}
+
+.pickContainerTitle p {
+  font-size: var(--p-size);
+  font-family: var(--text-font);
+  color: var(--secondary-text-color);
+  line-height: 1.5;
+}
+
+.pickContainerTitle h3 {
+  font-size: var(--h3-size);
+  font-family: var(--text-font);
+  font-weight: 500;
+}
+
+.pickContainerTitle h2 {
+  font-size: var(--h2-size);
+  font-family: var(--title-font);
+  margin: 0.5rem 0 1rem 0;
+}
+
+.pickContainerCarContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+@media (max-width: 1050px) {
+  .pickContainerCarContent {
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
+
+.pickBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  list-style: none;
+}
+
+.pickBox button {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  font-family: var(--title-font);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem 2.5rem;
+  background-color: #e9e9e9;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.pickBox button:hover {
+  background-color: var(--main-theme-color);
+  color: white;
+}
+
+.coloredButton {
+  background-color: var(--main-theme-color) !important;
+  color: white;
+}

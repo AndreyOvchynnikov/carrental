@@ -1,0 +1,24 @@
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 1rem 1.4rem;
+  margin-bottom: 1.8rem;
+  margin-top: -1rem;
+  border: 1px solid transparent;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.error svg  {
+  cursor: pointer;
+}
+
+.success {
+  composes: error;
+  background-color: #c3fabe;
+  color: #2a6817;
+}

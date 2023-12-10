@@ -1,0 +1,65 @@
+@import '../../styles/variables.css';
+
+.teamList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 4rem;
+  align-items: center;
+  text-align: center;
+  padding: 10rem 2rem;
+  width: 110rem;
+  margin: 0 auto;
+  list-style: none;
+}
+
+@media (max-width: 1150px) {
+  .teamList {
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 800px) {
+  .teamList {
+    grid-template-columns: 1fr;
+    width: fit-content;
+  }
+}
+
+.teamItem {
+  width: 33rem;
+  background-color: white;
+  box-shadow: 0px 20px 10px 0px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 400px) {
+  .teamItem {
+    width: 100%;
+  }
+}
+
+.teamItemImage {
+  width: 100%;
+  height: auto;
+  background-color: #f6f6f6;
+}
+
+.teamItemImage img {
+  width: 100%;
+}
+
+.teamDescription {
+  color: var(--main-text-color);
+  padding: 3rem;
+}
+
+.teamDescription h3 {
+  font-size: var(--h4-size);
+}
+
+.teamDescription p {
+  font-size: var(--p-size);
+  font-weight: 500;
+  color: #777777;
+}
