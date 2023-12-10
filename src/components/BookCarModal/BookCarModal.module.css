@@ -58,7 +58,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 83rem;
-  height: 100vh;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   border: 2px solid white;
   background-color: rgb(255, 255, 255);
   padding-right: 2px;
