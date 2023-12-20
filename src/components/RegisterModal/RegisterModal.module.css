@@ -1,0 +1,98 @@
+@import '../../styles/variables.css';
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9;
+  top: 0;
+  right: 0;
+}
+
+.modalContainer {
+  width: 100%;
+  position: fixed;
+  overflow-x: hidden;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 53rem;
+  border: 2px solid white;
+  background-color: rgb(255, 255, 255);
+  color: var(--main-text-color);
+}
+
+.modalTitle {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: var(--main-theme-color);
+  color: white;
+  align-items: center;
+}
+
+.modalTitle h2 {
+  font-size: var(--h4-size);
+  text-transform: uppercase;
+}
+
+.closeButton {
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.label {
+  font-size: var(--p-size);
+  font-weight: 500;
+  color: #777777;
+  margin-top: 1rem;
+}
+
+.label b {
+  color: var(--main-theme-color);
+}
+.label span {
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--main-text-color);
+}
+
+.input {
+  width: 100%;
+  padding: 14px 15px;
+  background-color: #dbdbdb;
+  color: #555;
+  font-size: 1.5rem;
+  font-weight: 500;
+  outline: none;
+  border: none;
+}
+
+.formButton {
+  font-size: var(--h3-size);
+  color: white;
+  font-weight: 700;
+  background-color: var(--main-theme-color);
+  border: 1px solid yellow;
+  padding: 1.2rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+
+.formButton:hover {
+  background-color: #fe3516;
+}
+

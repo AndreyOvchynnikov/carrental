@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Hero from "../components/Hero";
 import BookCar from "../components/BookCar";
 import PlanTrip from "../components/PlanTrip";
@@ -8,9 +9,13 @@ import Testimonials from "../components/Testimonials";
 import Faq from "../components/Faq";
 import Download from "../components/Download";
 
-function Home() {
+const Home = () => {
+
   return (
     <>
+      <Helmet>
+        <title>Car Rental</title>
+      </Helmet>
       <Hero />
       <BookCar />
       <PlanTrip />
@@ -22,6 +27,6 @@ function Home() {
       <Download />
     </>
   );
-}
+};
 
 export default Home;

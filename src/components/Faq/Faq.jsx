@@ -21,7 +21,7 @@ const Faq = () => {
 
   return (
     <>
-      <section className={s.faqSection}>
+      <section className={s.faqSection} id="faq">
         <Container>
           <div className={s.faqContent}>
             <div className={s.faqContentTitle}>

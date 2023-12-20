@@ -13,7 +13,7 @@
   left: 0;
   right: 0;
   background-color: transparent;
-  z-index: 99999;
+  z-index: 9;
   margin: 0 auto;
 }
   
@@ -51,50 +51,6 @@
   .navbarLinks {
     display: none;
   }
-}
-
-.navbarButtons {
-  display: flex;
-  gap: 2.5rem;
-  font-size: var(--p-size);
-  font-family: var(--text-font);
-  font-weight: 500;
-  align-items: center;
-  list-style: none;
-}
-
-@media (max-width: 1000px) {
-  .navbarButtons {
-    display: none;
-  }
-}
-
-.navbarButtonsSignIn {
-  color: var(--main-text-color);
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.navbarButtonsSignIn:hover {
-  color: var(--main-theme-color);
-}
-
-.navbarButtonsRegister {
-  background-color: var(--main-theme-color);
-  color: white;
-  padding: 1.5rem 3rem;
-  border-radius: 3px;
-  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
-  transition: all 0.3s;
-}
-
-.navbarButtonsRegister:hover {
-  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.5);
-  background-color: #fa4226;
-}
-
-.navbarButtons a {
-  text-decoration: none;
 }
 
 .mobileHamb {
@@ -184,4 +140,42 @@ left: 0;
   justify-content: center;
   padding: 2rem;
   cursor: pointer;
+}
+
+.userMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  font-size: 2.3rem;
+  font-family: var(--text-font);
+  font-weight: 500;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.userGreet {
+  color: var(--main-text-color);
+}
+
+.userGreet span {
+  color: var(--main-theme-color);
+}
+
+.userLogout {
+  background-color: var(--main-theme-color);
+  color: white;
+  border: transparent;
+  padding: 1.5rem 3rem;
+  border-radius: 3px;
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
+  transition: all 0.3s;
+  font-size: 2.3rem;
+  font-family: var(--text-font);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.userLogout:hover {
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.5);
+  background-color: #fa4226;
 }

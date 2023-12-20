@@ -10,6 +10,10 @@ const Hero = () => {
     const bookBtn = () => {
         document.querySelector("#booking-section").scrollIntoView();
     };
+
+    const learnBtn = () => {
+        document.querySelector("#choose-us").scrollIntoView();
+    }
    
     return (
         <section id="home" className={s.heroSection}>
@@ -30,13 +34,15 @@ const Hero = () => {
                                 <Link
                                     onClick={bookBtn}
                                     className={s.heroContentBtnLeft}
-                                    to="/"
                                 >
                                     Book Ride &nbsp; <IconCircleCheck />
                                 </Link>
                             </li>
                             <li>
-                                <Link className={s.heroContentBtnRight} to="/">
+                                <Link
+                                    className={s.heroContentBtnRight}
+                                    onClick={learnBtn}
+                                >
                                     Learn More &nbsp; <IconChevronRight />
                                 </Link>
                             </li>

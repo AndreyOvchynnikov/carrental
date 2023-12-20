@@ -4,11 +4,17 @@ import box2 from "../../images/chooseUs/icon2.png";
 import box3 from "../../images/chooseUs/icon3.png";
 import { IconChevronRight } from "@tabler/icons-react";
 import s from './ChooseUs.module.css';
+import { Link } from "react-router-dom";
 
 const ChooseUs = () => {
+
+  const findDetailsBtn = () => {
+    document.querySelector("#faq").scrollIntoView();
+  }
+
   return (
     
-    <section className={s.chooseSection}>
+    <section className={s.chooseSection} id="choose-us">
       <Container>
         <div className={s.chooseContainer}>
           <div className={s.textContainer}>
@@ -23,10 +29,10 @@ const ChooseUs = () => {
                 give you the ultimate renting experience, so don't miss out on
                 your chance to save big.
               </p>
-              <a href="#home">
+              <Link onClick={findDetailsBtn}>
                 Find Details &nbsp;
                 <IconChevronRight />
-              </a>
+              </Link>
             </div>
             <ul className={s.textContainerRight}>
               <li className={s.textContainerRightBox}>

@@ -7,6 +7,7 @@ import s from './AboutCompany.module.css';
 
 
 const AboutCompany = () => {
+
     return (
         
         <Container>

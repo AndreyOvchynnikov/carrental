@@ -1,0 +1,40 @@
+@import '../../styles/variables.css';
+
+.userMenu {
+  display: flex;
+  gap: 2.5rem;
+  font-size: var(--p-size);
+  font-family: var(--text-font);
+  font-weight: 500;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .userMenu {
+    display: none;
+  }
+}
+
+.userGreet {
+  color: var(--main-text-color);
+}
+
+.userLogout {
+  background-color: var(--main-theme-color);
+  color: white;
+  border: transparent;
+  padding: 1.5rem 3rem;
+  border-radius: 3px;
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
+  transition: all 0.3s;
+  font-size: var(--p-size);
+  font-family: var(--text-font);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.userLogout:hover {
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.5);
+  background-color: #fa4226;
+}
+

@@ -1,15 +1,19 @@
-import "../src/dist/styles.css";
-import About from "./Pages/About";
-import Home from "./Pages/Home";
-import SharedLayout from "components/SharedLayout";
+import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import ModelsPage from "./Pages/ModelsPage";
-import TestimonialsPage from "./Pages/TestimonialsPage";
-import TeamPage from "./Pages/TeamPage";
-import ContactsPage from "./Pages/ContactsPage";
+import { AuthContext } from "./components/context/authContext";
+import "../src/index.css";
 
-function App() {
+const SharedLayout = lazy(() => import('./components/SharedLayout'));
+const About = lazy(() => import('./pages/About'));
+const Home = lazy(() => import('./pages/Home'));
+const ModelsPage = lazy(() => import('./pages/ModelsPage'));
+const TestimonialsPage = lazy(() => import('./pages/TestimonialsPage'));
+const TeamPage = lazy(() => import('./pages/TeamPage'));
+const ContactsPage = lazy(() => import('./pages/ContactsPage'));
 
+
+const App = () => {
+  
 function appHeight() {
   const doc = document.documentElement
   doc.style.setProperty('--vh', (window.innerHeight*.01) + 'px');
@@ -18,11 +22,10 @@ function appHeight() {
   window.addEventListener('resize', appHeight);
   appHeight();
 
-
-
-
   return (
-      <Routes>
+
+    <AuthContext>
+        <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
@@ -32,7 +35,9 @@ function appHeight() {
           <Route path="contact" element={<ContactsPage />} />
         </Route>
       </Routes>
+    </AuthContext>
+      
   );
-}
+};
 
 export default App;

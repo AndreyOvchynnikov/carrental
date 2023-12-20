@@ -1,19 +1,18 @@
 import { useState } from "react";
 import { IconCar, IconMapPinFilled, IconCalendarEvent } from "@tabler/icons-react";
-import Message from "components/Message";
+import BookCarMessage from "components/BookCarMessage";
 import BookCarModal from "components/BookCarModal";
-import s from './BookCar.module.css';
 import Container from "components/Container";
+import s from './BookCar.module.css';
 
 const BookCar = () => {
 
-  const [showMessage, setShowMessage] = useState(false);
+  const [showBookMessage, setShowBookMessage] = useState(false);
   const [messageText, setMessageText] = useState("");
-  const [messageStatus, setMessageStatus] = useState(false);
   
   const requiredFieldsMessage = "All fields must be required!";
   const correctTimeMessage = "Please set the correct dates!";
-  const toggleMessage = () => setShowMessage(!showMessage);
+  const toggleMessage = () => setShowBookMessage(!showBookMessage);
 
   const [bookInfo, setbookInfo] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -33,17 +32,16 @@ const BookCar = () => {
    
     if (filteredValues.length !== values.length) {
       setMessageText(requiredFieldsMessage);
-      setMessageStatus(false);
-      setShowMessage(true);
+      setShowBookMessage(true);
       return;
     }
+
     if (pickDate < actualDate || pickDate > dropDate) {
       setMessageText(correctTimeMessage);
-      setMessageStatus(true);
-      setMessageStatus(false);
-      setShowMessage(true);
+      setShowBookMessage(true);
       return;
     }
+
     setbookInfo({
       carId: carId.value,
       pickUp: pickUp.value,
@@ -61,16 +59,13 @@ const BookCar = () => {
         {showModal && <BookCarModal
           bookInfo={bookInfo}
           toggleModal={toggleModal}
-          setShowMessage={setShowMessage}
-          setMessageStatus={setMessageStatus}
-          setMessageText={setMessageText}
         />}
         <Container>
           <div className={s.bookContent}>
             <div className={s.bookContentBox}>
               <h2>Book a car</h2>
-              {showMessage &&
-                <Message text={messageText} status={messageStatus} toggleMessage={toggleMessage} />}
+              {showBookMessage &&
+                <BookCarMessage text={messageText} toggleMessage={toggleMessage} />}
               <form className={s.boxForm} onSubmit={handleSubmit}>
 
                 <div className={s.boxFormCarType}>
@@ -124,7 +119,6 @@ const BookCar = () => {
                     <IconCalendarEvent /> &nbsp; Pick-up Time
                     &nbsp; <b>*</b>
                     <input
-                      id="picktime"
                       name="pickTime"
                       type="date"
                       required
@@ -137,7 +131,6 @@ const BookCar = () => {
                     <IconCalendarEvent /> &nbsp; Drop-of Time
                     &nbsp; <b>*</b>
                     <input
-                      id="droptime"
                       name="dropTime"
                       type="date"
                       required

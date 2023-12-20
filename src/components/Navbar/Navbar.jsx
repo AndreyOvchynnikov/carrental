@@ -4,12 +4,16 @@ import { useState, useEffect } from "react";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { navLinks } from "data/navLinks";
 import s from './Navbar.module.css';
+import { useAuthContext } from "../context/authContext";
+import AuthNav from "../AuthNav";
+import UserMenu from "components/UserMenu";
 
 
 const Navbar = () => {
 
     const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
     const [goUpArrow, setGoUpArrow] = useState(false);
+    const { isLogin, setShowRegisterModal, setShowLogInModal, userName, userLogout } = useAuthContext();
 
     useEffect(() => {
       
@@ -33,6 +37,24 @@ const Navbar = () => {
         setIsOpenMobileMenu(!isOpenMobileMenu);
     };
 
+    const onLogInClick = (e) => {
+        e.preventDefault();
+        toggleMobileMenu();
+        setShowLogInModal(true);
+    };
+
+    const onRegisterClick = (e) => {
+        e.preventDefault();
+        toggleMobileMenu();
+        setShowRegisterModal(true);
+    };
+
+    const onLogoutMobileClick = async () => {
+        await userLogout();
+        toggleMobileMenu();
+    }
+
+
     return (
         <>
             <nav>
@@ -49,12 +71,26 @@ const Navbar = () => {
                                 </li>
                             );
                         })}
-                        <li>
-                            <Link onClick={toggleMobileMenu} to="/">Sign In</Link>
-                        </li>
-                        <li>
-                            <Link onClick={toggleMobileMenu} to="/">Register</Link>
-                        </li>
+                        {isLogin ? (
+                            <div className={s.userMenu}>
+                                <p className={s.userGreet}>Welcome, <span>{userName}</span></p>
+                                <button
+                                    className={s.userLogout}
+                                    type="button"
+                                    onClick={onLogoutMobileClick}
+                                >Logout</button>
+                            </div>
+                        ) : (
+                            <>
+                                <li>
+                                    <Link onClick={onLogInClick}>Log In</Link>
+                                </li>
+                                <li>
+                                    <Link onClick={onRegisterClick}>Register</Link>
+                                </li>
+                            </>
+                            
+                        )}
                     </ul>
                 </div>
                 <div className={s.navbar}>
@@ -73,14 +109,8 @@ const Navbar = () => {
                             )
                         })}
                     </ul>
-                    <ul className={s.navbarButtons}>
-                        <li>
-                            <Link className={s.navbarButtonsSignIn} to="/">Sign In</Link>
-                        </li>
-                        <li>
-                            <Link className={s.navbarButtonsRegister} to="/">Register</Link>
-                        </li>                       
-                    </ul>
+                    {isLogin ? <UserMenu /> : <AuthNav />}
+                    
                     <div className={s.mobileHamb} onClick={toggleMobileMenu}>
                         <IconMenu2 width={30} height={30} />
                     </div>
