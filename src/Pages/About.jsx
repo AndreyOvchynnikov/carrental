@@ -1,4 +1,4 @@
-// import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import PageHead from '../components/PageHead';
 import AboutCompany from 'components/AboutCompany';
 import PlanTrip from "../components/PlanTrip";
@@ -9,9 +9,9 @@ const About = () => {
   
   return (
     <>
-      {/* <Helmet>
-        <title>Car Rental / About</title>
-      </Helmet> */}
+      <Helmet>
+        <title>Car Rental/About</title>
+      </Helmet>
       <PageHead pageName="About" />
       <AboutCompany />
       <PlanTrip />

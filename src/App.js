@@ -2,13 +2,6 @@ import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import { AuthContext } from "./components/context/authContext";
 import "../src/index.css";
-// import SharedLayout from "components/SharedLayout";
-// import About from "pages/About";
-// import Home from "pages/Home";
-// import ModelsPage from "pages/ModelsPage";
-// import TestimonialsPage from "pages/TestimonialsPage";
-// import TeamPage from "pages/TeamPage";
-// import ContactsPage from "pages/ContactsPage";
 
 const SharedLayout = lazy(() => import("./components/SharedLayout"));
 const About = lazy(() => import("./Pages/About"));
