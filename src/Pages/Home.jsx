@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 import Hero from "../components/Hero";
 import BookCar from "../components/BookCar";
 import PlanTrip from "../components/PlanTrip";
@@ -13,9 +13,9 @@ const Home = () => {
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Car Rental</title>
-      </Helmet>
+      </Helmet> */}
       <Hero />
       <BookCar />
       <PlanTrip />
