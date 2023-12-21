@@ -7,7 +7,7 @@ const TestimonialsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Car Rental / Testimonials</title>
+        <title>Car Rental/Testimonials</title>
       </Helmet>
       <PageHead pageName="Testimonials" />
       <Testimonials />
