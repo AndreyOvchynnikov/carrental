@@ -11,12 +11,12 @@ import "../src/index.css";
 // import ContactsPage from "pages/ContactsPage";
 
 const SharedLayout = lazy(() => import("./components/SharedLayout"));
-const About = lazy(() => import("./pages/About"));
-const Home = lazy(() => import("./pages/Home"));
-const ModelsPage = lazy(() => import("./pages/ModelsPage"));
-const TestimonialsPage = lazy(() => import("./pages/TestimonialsPage"));
-const TeamPage = lazy(() => import("./pages/TeamPage"));
-const ContactsPage = lazy(() => import("./pages/ContactsPage"));
+const About = lazy(() => import("./Pages/About"));
+const Home = lazy(() => import("./Pages/Home"));
+const ModelsPage = lazy(() => import("./Pages/ModelsPage"));
+const TestimonialsPage = lazy(() => import("./Pages/TestimonialsPage"));
+const TeamPage = lazy(() => import("./Pages/TeamPage"));
+const ContactsPage = lazy(() => import("./Pages/ContactsPage"));
 
 
 const App = () => {
