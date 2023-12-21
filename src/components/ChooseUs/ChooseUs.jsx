@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
+import { IconChevronRight } from "@tabler/icons-react";
 import Container from "components/Container";
 import box1 from "../../images/chooseUs/icon1.png";
 import box2 from "../../images/chooseUs/icon2.png";
 import box3 from "../../images/chooseUs/icon3.png";
-import { IconChevronRight } from "@tabler/icons-react";
 import s from './ChooseUs.module.css';
-import { Link } from "react-router-dom";
+
 
 const ChooseUs = () => {
 

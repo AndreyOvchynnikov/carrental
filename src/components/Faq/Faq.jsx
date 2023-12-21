@@ -1,23 +1,26 @@
-import { IconChevronDown } from "@tabler/icons-react";
 import { useState } from "react";
 import Container from "components/Container";
+import { IconChevronDown } from "@tabler/icons-react";
 import { faqData } from '../../data/faqData';
 import s from './Faq.module.css';
 
 const defaultActiveQ = faqData[0].id;
 
 const Faq = () => {
+
   const [activeQ, setActiveQ] = useState(defaultActiveQ);
     
   const handleClick = (event) => {
+
     const currentId = event.currentTarget.name;
 
     if (currentId === activeQ) {
       setActiveQ("");
       return;
     }
+
     setActiveQ(currentId);
-  }
+  };
 
   return (
     <>

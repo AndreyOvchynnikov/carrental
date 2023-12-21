@@ -1,9 +1,9 @@
+import { useState } from "react";
 import { IconMail, IconPhoneCall } from "@tabler/icons-react";
 import Container from "components/Container";
+import ModalMessage from "components/ModalMessage";
 import { companyLinks } from '../../data/footerData';
 import s from './Footer.module.css';
-import { useState } from "react";
-import ModalMessage from "components/ModalMessage";
 
 const Footer = () => {
 
@@ -20,15 +20,10 @@ const Footer = () => {
   
   return (
     <>
-      {showFooterMessage && <ModalMessage text={submitMessage} closeButton={toogleMessage} />}
-      {/* {showFooterMessage && <div className={s.overlay}>
-        <div className={s.wrapper}>
-          <div className={s.message}>
-            <p>{submitMessage}</p>
-            <button type="button" onClick={() => setShowFooterMessage(false)}>OK</button>
-          </div>
-        </div>
-      </div>} */}
+      {showFooterMessage &&
+        <ModalMessage text={submitMessage}
+          closeButton={toogleMessage}
+        />}
       <footer className={s.footerSection}>
         <Container>
           <div className={s.footerWpapper}>

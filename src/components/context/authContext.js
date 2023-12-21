@@ -1,10 +1,10 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { register, logout, refreshUser, logIn} from '../api';
 
-
 const Context = createContext();
 
 export const AuthContext = ({ children }) => {
+
     const [isLogin, setIsLogin] = useState(false);
     const [showRegisterModal, setShowRegisterModal] = useState(false);
     const [showLogInModal, setShowLogInModal] = useState(false);
@@ -38,6 +38,7 @@ export const AuthContext = ({ children }) => {
 
     
     const registerSubmit = async (event) => {
+
         event.preventDefault();
         const formData = event.target.elements;
         const values = {
@@ -45,6 +46,7 @@ export const AuthContext = ({ children }) => {
             email: formData.email.value,
             password: formData.password.value,
         };
+
         setIsLoading(true);
         const responce = await register(values);
         setToken(responce.token);
@@ -55,12 +57,14 @@ export const AuthContext = ({ children }) => {
     };
 
     const logInSubmit = async (event) => {
+        
         event.preventDefault();
         const formData = event.target.elements;
         const values = {
             email: formData.email.value,
             password: formData.password.value,
         };
+
         setIsLoading(true);
         const responce = await logIn(values);
         setToken(responce.token);
@@ -71,6 +75,7 @@ export const AuthContext = ({ children }) => {
     };
 
     const userLogout = async () => {
+
         setIsLoading(true);
         await logout();
         setToken("");
@@ -79,6 +84,7 @@ export const AuthContext = ({ children }) => {
         setShowRegisterModal(false);
         setIsLogin(!isLogin);
         setIsLoading(false);
+
     };
 
 

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
+import { IconChevronRight, IconCircleCheck } from "@tabler/icons-react";
+import Container from "components/Container";
 import BgShape from "../../images/hero/hero-bg.png";
 import HeroCar from "../../images/hero/main-car.png";
-import { IconChevronRight, IconCircleCheck } from "@tabler/icons-react";
 import s from './Hero.module.css';
-import Container from "components/Container";
 
 const Hero = () => {
 

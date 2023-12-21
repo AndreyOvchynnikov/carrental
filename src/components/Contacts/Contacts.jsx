@@ -13,13 +13,17 @@ const Contacts = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        toogleMessage()
+        toogleMessage();
         event.target.reset();
     };
 
     return (
         <>
-            {showQuestionMessage && <ModalMessage text={questionMessage} closeButton={toogleMessage} />}
+            {showQuestionMessage &&
+                <ModalMessage
+                    text={questionMessage}
+                    closeButton={toogleMessage}
+                />}
             <section className={s.contactsSection}>
                 <Container>
                     <div className={s.contactsWrapper}>

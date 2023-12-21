@@ -1,12 +1,12 @@
-import { Link, NavLink } from "react-router-dom";
-import logoImg from "../../images/logo/logo.png";
 import { useState, useEffect } from "react";
 import { IconMenu2, IconX } from "@tabler/icons-react";
+import { Link, NavLink } from "react-router-dom";
 import { navLinks } from "data/navLinks";
-import s from './Navbar.module.css';
 import { useAuthContext } from "../context/authContext";
 import AuthNav from "../AuthNav";
 import UserMenu from "components/UserMenu";
+import logoImg from "../../images/logo/logo.png";
+import s from './Navbar.module.css';
 
 
 const Navbar = () => {

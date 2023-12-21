@@ -12,7 +12,9 @@ const UserMenu = () => {
                 className={s.userLogout}
                 type="button"
                 onClick={userLogout}
-            >Logout</button>
+            >
+                Logout
+            </button>
         </div>
     )
 };

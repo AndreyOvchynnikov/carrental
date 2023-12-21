@@ -8,7 +8,6 @@ const RegisterModal = () => {
 
     const { showRegisterModal, setShowRegisterModal, registerSubmit, setIsLoading } = useAuthContext();
 
-    
     useEffect(() => {
         document.body.style.overflow = "hidden";
         return () => {
@@ -32,7 +31,7 @@ const RegisterModal = () => {
     
     return (
         <>
-            {showRegisterMessage && <ModalMessage text={registerErrorMessage} closeButton={toogleMessage} /> }
+            {showRegisterMessage && <ModalMessage text={registerErrorMessage} closeButton={toogleMessage} />}
             <div className={s.overlay}>
                 <div className={s.modalContainer}>
                     <div className={s.modalTitle} >

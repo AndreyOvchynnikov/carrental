@@ -5,6 +5,7 @@ import Drive from '../../images/plan/icon3.png';
 import s from './PlanTrip.module.css';
 
 const PlanTrip = () => {
+
     return (
       
         <section className={s.planSection}>
@@ -44,6 +45,6 @@ const PlanTrip = () => {
             </Container>
         </section>
     );
-}
+};
 
 export default PlanTrip;

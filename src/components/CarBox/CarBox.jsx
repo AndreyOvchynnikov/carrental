@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { carDATA } from "data/CarData";
 import s from './CarBox.module.css';
-import { useState } from "react";
 
 const CarBox = ({ carID }) => {
   const [showLoader, setShowLoader] = useState(true);

@@ -14,7 +14,7 @@ const ModelsModal = ({ toggleModelsModal }) => {
     }, []);
 
     const [showModelsModalMessage, setShowModelsModalMessage] = useState(false);
-    const successMessageText = "Thank you! Our manager will contact you soon."
+    const successMessageText = "Thank you! Our manager will contact you soon.";
 
     const handleSubmit = (event) => {
         event.preventDefault();

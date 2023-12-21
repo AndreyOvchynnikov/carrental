@@ -1,9 +1,9 @@
-import { IconX, IconMapPinFilled, IconInfoCircleFilled } from "@tabler/icons-react";
-import { carDATA } from '../../data/CarData';
-import BookCarModalForm from '../BookCarModalForm';
 import { useEffect, useState } from "react";
-import s from './BookCarModal.module.css';
+import { IconX, IconMapPinFilled, IconInfoCircleFilled } from "@tabler/icons-react";
+import BookCarModalForm from '../BookCarModalForm';
 import ModalMessage from "components/ModalMessage";
+import { carDATA } from '../../data/CarData';
+import s from './BookCarModal.module.css';
 
 
 const BookCarModal = ({ bookInfo, toggleModal }) => {
