@@ -4,7 +4,7 @@ import Banner from "components/Banner";
 import Contacts from "components/Contacts";
 
 
-const ContactsPage = () => {
+function ContactsPage() {
   
   return (
     <>
