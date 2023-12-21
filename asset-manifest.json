@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/carrental/static/css/main.500a69b8.css",
-    "main.js": "/carrental/static/js/main.cb79f1dd.js",
+    "main.js": "/carrental/static/js/main.458fdddd.js",
     "static/css/997.33ac2e53.chunk.css": "/carrental/static/css/997.33ac2e53.chunk.css",
     "static/js/997.5dc0eb91.chunk.js": "/carrental/static/js/997.5dc0eb91.chunk.js",
     "static/css/726.aada0871.chunk.css": "/carrental/static/css/726.aada0871.chunk.css",
-    "static/js/726.264acf04.chunk.js": "/carrental/static/js/726.264acf04.chunk.js",
+    "static/js/726.10ebb803.chunk.js": "/carrental/static/js/726.10ebb803.chunk.js",
     "static/css/146.56961589.chunk.css": "/carrental/static/css/146.56961589.chunk.css",
-    "static/js/146.7aebe1f3.chunk.js": "/carrental/static/js/146.7aebe1f3.chunk.js",
+    "static/js/146.c2e92998.chunk.js": "/carrental/static/js/146.c2e92998.chunk.js",
     "static/css/524.7230e29d.chunk.css": "/carrental/static/css/524.7230e29d.chunk.css",
     "static/js/524.cf68aaea.chunk.js": "/carrental/static/js/524.cf68aaea.chunk.js",
     "static/css/892.92dcc278.chunk.css": "/carrental/static/css/892.92dcc278.chunk.css",
@@ -16,7 +16,8 @@
     "static/js/259.fbd1184a.chunk.js": "/carrental/static/js/259.fbd1184a.chunk.js",
     "static/css/333.4222d523.chunk.css": "/carrental/static/css/333.4222d523.chunk.css",
     "static/js/333.54ccad17.chunk.js": "/carrental/static/js/333.54ccad17.chunk.js",
-    "static/js/397.8b63489b.chunk.js": "/carrental/static/js/397.8b63489b.chunk.js",
+    "static/js/160.bb2719e7.chunk.js": "/carrental/static/js/160.bb2719e7.chunk.js",
+    "static/js/809.4479a9df.chunk.js": "/carrental/static/js/809.4479a9df.chunk.js",
     "static/media/heroes-bg.png": "/carrental/static/media/heroes-bg.71ab9a13d73de3860763.png",
     "static/media/toyota-box.png": "/carrental/static/media/toyota-box.8968332b7901c6bb183c.png",
     "static/media/passat-box.png": "/carrental/static/media/passat-box.c78021e11cf230128bcc.png",
@@ -52,13 +53,13 @@
     "static/media/appstore.svg": "/carrental/static/media/appstore.35481c6295b0744dfcc00d35874fbdd8.svg",
     "index.html": "/carrental/index.html",
     "main.500a69b8.css.map": "/carrental/static/css/main.500a69b8.css.map",
-    "main.cb79f1dd.js.map": "/carrental/static/js/main.cb79f1dd.js.map",
+    "main.458fdddd.js.map": "/carrental/static/js/main.458fdddd.js.map",
     "997.33ac2e53.chunk.css.map": "/carrental/static/css/997.33ac2e53.chunk.css.map",
     "997.5dc0eb91.chunk.js.map": "/carrental/static/js/997.5dc0eb91.chunk.js.map",
     "726.aada0871.chunk.css.map": "/carrental/static/css/726.aada0871.chunk.css.map",
-    "726.264acf04.chunk.js.map": "/carrental/static/js/726.264acf04.chunk.js.map",
+    "726.10ebb803.chunk.js.map": "/carrental/static/js/726.10ebb803.chunk.js.map",
     "146.56961589.chunk.css.map": "/carrental/static/css/146.56961589.chunk.css.map",
-    "146.7aebe1f3.chunk.js.map": "/carrental/static/js/146.7aebe1f3.chunk.js.map",
+    "146.c2e92998.chunk.js.map": "/carrental/static/js/146.c2e92998.chunk.js.map",
     "524.7230e29d.chunk.css.map": "/carrental/static/css/524.7230e29d.chunk.css.map",
     "524.cf68aaea.chunk.js.map": "/carrental/static/js/524.cf68aaea.chunk.js.map",
     "892.92dcc278.chunk.css.map": "/carrental/static/css/892.92dcc278.chunk.css.map",
@@ -67,10 +68,11 @@
     "259.fbd1184a.chunk.js.map": "/carrental/static/js/259.fbd1184a.chunk.js.map",
     "333.4222d523.chunk.css.map": "/carrental/static/css/333.4222d523.chunk.css.map",
     "333.54ccad17.chunk.js.map": "/carrental/static/js/333.54ccad17.chunk.js.map",
-    "397.8b63489b.chunk.js.map": "/carrental/static/js/397.8b63489b.chunk.js.map"
+    "160.bb2719e7.chunk.js.map": "/carrental/static/js/160.bb2719e7.chunk.js.map",
+    "809.4479a9df.chunk.js.map": "/carrental/static/js/809.4479a9df.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.500a69b8.css",
-    "static/js/main.cb79f1dd.js"
+    "static/js/main.458fdddd.js"
   ]
 }
