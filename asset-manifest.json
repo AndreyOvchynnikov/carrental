@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/carrental/static/css/main.500a69b8.css",
-    "main.js": "/carrental/static/js/main.507d866f.js",
+    "main.js": "/carrental/static/js/main.7bad0193.js",
     "static/css/997.d757ea26.chunk.css": "/carrental/static/css/997.d757ea26.chunk.css",
     "static/js/997.c451fe7d.chunk.js": "/carrental/static/js/997.c451fe7d.chunk.js",
     "static/css/726.aada0871.chunk.css": "/carrental/static/css/726.aada0871.chunk.css",
     "static/js/726.5382e74b.chunk.js": "/carrental/static/js/726.5382e74b.chunk.js",
-    "static/css/146.e02bf590.chunk.css": "/carrental/static/css/146.e02bf590.chunk.css",
+    "static/css/146.382aa8c0.chunk.css": "/carrental/static/css/146.382aa8c0.chunk.css",
     "static/js/146.e84fac7c.chunk.js": "/carrental/static/js/146.e84fac7c.chunk.js",
     "static/css/524.7230e29d.chunk.css": "/carrental/static/css/524.7230e29d.chunk.css",
     "static/js/524.48558cdd.chunk.js": "/carrental/static/js/524.48558cdd.chunk.js",
@@ -53,12 +53,12 @@
     "static/media/appstore.svg": "/carrental/static/media/appstore.35481c6295b0744dfcc00d35874fbdd8.svg",
     "index.html": "/carrental/index.html",
     "main.500a69b8.css.map": "/carrental/static/css/main.500a69b8.css.map",
-    "main.507d866f.js.map": "/carrental/static/js/main.507d866f.js.map",
+    "main.7bad0193.js.map": "/carrental/static/js/main.7bad0193.js.map",
     "997.d757ea26.chunk.css.map": "/carrental/static/css/997.d757ea26.chunk.css.map",
     "997.c451fe7d.chunk.js.map": "/carrental/static/js/997.c451fe7d.chunk.js.map",
     "726.aada0871.chunk.css.map": "/carrental/static/css/726.aada0871.chunk.css.map",
     "726.5382e74b.chunk.js.map": "/carrental/static/js/726.5382e74b.chunk.js.map",
-    "146.e02bf590.chunk.css.map": "/carrental/static/css/146.e02bf590.chunk.css.map",
+    "146.382aa8c0.chunk.css.map": "/carrental/static/css/146.382aa8c0.chunk.css.map",
     "146.e84fac7c.chunk.js.map": "/carrental/static/js/146.e84fac7c.chunk.js.map",
     "524.7230e29d.chunk.css.map": "/carrental/static/css/524.7230e29d.chunk.css.map",
     "524.48558cdd.chunk.js.map": "/carrental/static/js/524.48558cdd.chunk.js.map",
@@ -73,6 +73,6 @@
   },
   "entrypoints": [
     "static/css/main.500a69b8.css",
-    "static/js/main.507d866f.js"
+    "static/js/main.7bad0193.js"
   ]
 }
