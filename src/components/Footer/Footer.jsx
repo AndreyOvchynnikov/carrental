@@ -49,7 +49,7 @@ const Footer = () => {
                   const { link, href } = item;
                   return (
                     <li key={index}>
-                      <a href={href}>{link}</a>
+                      <a href={href} onClick={(e) => e.preventDefault()}>{link}</a>
                     </li>
                   )
                 })}
