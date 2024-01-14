@@ -33,6 +33,20 @@
   font-size: var(--h3-size);
   font-weight: 700;
   margin-bottom: 2.7rem;
+  animation: changeColor 3s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes changeColor {
+  0% {
+    color: var(--main-text-color);
+  }
+  50% {
+    color: var(--main-theme-color);
+  }
+  100% {
+    color: var(--main-text-color);
+  }
 }
 
 .boxForm {
