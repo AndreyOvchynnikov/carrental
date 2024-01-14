@@ -54,6 +54,7 @@ const RegisterModal = () => {
                                 aria-label="Input for your name"
                                 minLength="2"
                                 className={s.input}
+                                required
                             />
                             <span>This field is required.</span>
                         </label>
@@ -65,6 +66,7 @@ const RegisterModal = () => {
                                 placeholder="Your email"
                                 aria-label="Input for your email"
                                 className={s.input}
+                                required
                             />
                             <span>This field is required.</span>
                         </label>
@@ -77,6 +79,7 @@ const RegisterModal = () => {
                                 aria-label="Input for your password"
                                 minLength="8"
                                 className={s.input}
+                                required
                             />
                             <span>This field is required.</span>
                         </label>

@@ -15,25 +15,88 @@
   color: var(--main-text-color);
   max-width: 50rem;
   margin-bottom: 5rem;
+  overflow-y: hidden;
 }
 
-.pickContainerTitle p {
+.pickContainerTitleP {
   font-size: var(--p-size);
   font-family: var(--text-font);
   color: var(--secondary-text-color);
   line-height: 1.5;
+  opacity: 0;
+  transform: translateY(100%);
 }
 
-.pickContainerTitle h3 {
+.pickContainerTitlePAnim {
+  font-size: var(--p-size);
+  font-family: var(--text-font);
+  color: var(--secondary-text-color);
+  line-height: 1.5;
+  animation: gotoup 1.5s forwards;
+}
+
+@keyframes gotoup {
+  0% {
+  opacity: 0;
+  transform: translateY(100%);
+  }
+  100% {
+  opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+.pickContainerTitleH3 {
   font-size: var(--h3-size);
   font-family: var(--text-font);
   font-weight: 500;
+  opacity: 0;
+  transform: translateX(-50%);
 }
 
-.pickContainerTitle h2 {
+.pickContainerTitleH3Anim {
+  font-size: var(--h3-size);
+  font-family: var(--text-font);
+  font-weight: 500;
+  animation: gotoright 1s forwards;
+}
+
+@keyframes gotoright {
+    0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+.pickContainerTitleH2 {
   font-size: var(--h2-size);
   font-family: var(--title-font);
   margin: 0.5rem 0 1rem 0;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.pickContainerTitleH2Anim {
+  font-size: var(--h2-size);
+  font-family: var(--title-font);
+  margin: 0.5rem 0 1rem 0;
+  animation: gotodown 1.5s forwards;
+
+}
+
+@keyframes gotodown {
+    0% {
+    opacity: 0;
+    transform: translateY(-100%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
 }
 
 .pickContainerCarContent {

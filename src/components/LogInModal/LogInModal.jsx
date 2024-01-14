@@ -54,6 +54,7 @@ const LogInModal = () => {
                                 placeholder="Your email"
                                 aria-label="Input for your email"
                                 className={s.input}
+                                required
                             />
                             <span>This field is required.</span>
                         </label>
@@ -66,6 +67,7 @@ const LogInModal = () => {
                                 aria-label="Input for your password"
                                 minLength="8"
                                 className={s.input}
+                                required
                             />
                             <span>This field is required.</span>
                         </label>
