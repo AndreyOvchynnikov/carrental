@@ -41,7 +41,10 @@
   0% {
     color: var(--main-text-color);
   }
-  50% {
+  25% {
+    color: var(--main-theme-color);
+  }
+  80% {
     color: var(--main-theme-color);
   }
   100% {

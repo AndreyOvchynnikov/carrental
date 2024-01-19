@@ -15,7 +15,7 @@
   color: var(--main-text-color);
   max-width: 50rem;
   margin-bottom: 5rem;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .pickContainerTitleP {
@@ -51,7 +51,7 @@
   font-family: var(--text-font);
   font-weight: 500;
   opacity: 0;
-  transform: translateX(-50%);
+  transform: translateX(-100%);
 }
 
 .pickContainerTitleH3Anim {
@@ -64,7 +64,7 @@
 @keyframes gotoright {
     0% {
     opacity: 0;
-    transform: translateX(-50%);
+    transform: translateX(-100%);
     }
     100% {
     opacity: 1;
@@ -77,39 +77,58 @@
   font-family: var(--title-font);
   margin: 0.5rem 0 1rem 0;
   opacity: 0;
-  transform: translateY(-100%);
+  transform: translateX(100%);
 }
 
 .pickContainerTitleH2Anim {
   font-size: var(--h2-size);
   font-family: var(--title-font);
   margin: 0.5rem 0 1rem 0;
-  animation: gotodown 1.5s forwards;
+  animation: gotoleft 1.5s forwards;
 
 }
 
-@keyframes gotodown {
+@keyframes gotoleft {
     0% {
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateX(100%);
     }
     100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
     }
 }
 
 .pickContainerCarContent {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 5rem;
 }
 
-@media (max-width: 1050px) {
+.pickContainerCarContentAnim {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+
+@media (min-width: 1050px) {
   .pickContainerCarContent {
-    flex-direction: column;
-    gap: 5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(100%);
   }
+  .pickContainerCarContentAnim {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: gotoup 1.5s forwards;
+  }
+
 }
 
 .pickBox {

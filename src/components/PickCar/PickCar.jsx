@@ -14,25 +14,31 @@ const PickCar = () => {
     setactiveCarId(event.target.name);
   }
 
-  const { ref, inView } = useInView({
-        triggerOnce: true,
-        rootMargin: '-100px 0px',
-    });
+  const animationOptions = {
+    triggerOnce: true,
+    rootMargin: '-100px 0px',
+  }
+
+  const { ref: titleRef, inView: titleIsVisible } = useInView(animationOptions);
+  const { ref: carContent, inView: carContentIsVisible } = useInView({
+    triggerOnce: true,
+    rootMargin: '400px 0px',
+  });
 
   return (
   
     <section className={s.pickSection}>
       <Container>
         <div className={s.pickContainer}>
-          <div ref={ref} className={s.pickContainerTitle}>
-            <h3 className={inView? s.pickContainerTitleH3Anim : s.pickContainerTitleH3}>Vehicle Models</h3>
-            <h2 className={inView? s.pickContainerTitleH2Anim : s.pickContainerTitleH2}>Our rental fleet</h2>
-            <p className={inView? s.pickContainerTitlePAnim : s.pickContainerTitleP}>
+          <div ref={titleRef} className={s.pickContainerTitle}>
+            <h3 className={titleIsVisible? s.pickContainerTitleH3Anim : s.pickContainerTitleH3}>Vehicle Models</h3>
+            <h2 className={titleIsVisible? s.pickContainerTitleH2Anim : s.pickContainerTitleH2}>Our rental fleet</h2>
+            <p className={titleIsVisible? s.pickContainerTitlePAnim : s.pickContainerTitleP}>
               Choose from a variety of our amazing vehicles to rent for your
               next adventure or business trip
             </p>
           </div>
-          <div className={s.pickContainerCarContent}>
+          <div ref={carContent} className={carContentIsVisible? s.pickContainerCarContentAnim : s.pickContainerCarContent}>
             <ul className={s.pickBox}>
               {carDATA.map(car => {
                 const { name: carName, id } = car;

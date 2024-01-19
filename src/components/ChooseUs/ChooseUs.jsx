@@ -5,13 +5,24 @@ import box1 from "../../images/chooseUs/icon1.png";
 import box2 from "../../images/chooseUs/icon2.png";
 import box3 from "../../images/chooseUs/icon3.png";
 import s from './ChooseUs.module.css';
+import { useInView } from "react-intersection-observer";
 
 
 const ChooseUs = () => {
 
   const findDetailsBtn = () => {
     document.querySelector("#faq").scrollIntoView();
-  }
+  };
+
+  const { ref: leftPart, inView: leftPartIsVivsible } = useInView({
+    triggerOnce: true,
+    rootMargin: '-100px 0px',
+  });
+
+  const { ref: rightPart, inView: rightPartIsVivsible } = useInView({
+    triggerOnce: true,
+    rootMargin: '-100px 0px',
+  });
 
   return (
     
@@ -19,7 +30,8 @@ const ChooseUs = () => {
       <Container>
         <div className={s.chooseContainer}>
           <div className={s.textContainer}>
-            <div className={s.textContainerLeft}>
+            <div ref={leftPart}
+              className={leftPartIsVivsible? s.textContainerLeftAnim : s.textContainerLeft}>
               <h4>Why Choose Us</h4>
               <h2>Best valued deals you will ever find</h2>
               <p>
@@ -35,9 +47,13 @@ const ChooseUs = () => {
                 <IconChevronRight />
               </Link>
             </div>
-            <ul className={s.textContainerRight}>
+            <ul
+              ref={rightPart}
+              className={rightPartIsVivsible ? s.textContainerRightAnim : s.textContainerRight}>
               <li className={s.textContainerRightBox}>
-                <img src={box1} alt="car-img" />
+                <img
+                  className={rightPartIsVivsible ? s.textContainerRightImgAnim : s.textContainerRightImg}
+                  src={box1} alt="car-img" />
                 <div className={s.textContainerRightBoxText}>
                   <h4>Cross Country Drive</h4>
                   <p>
@@ -47,7 +63,9 @@ const ChooseUs = () => {
                 </div>
               </li>
               <li className={s.textContainerRightBox}>
-                <img src={box2} alt="coin-img" />
+                <img
+                  className={rightPartIsVivsible ? s.textContainerRightImgAnim : s.textContainerRightImg}
+                  src={box2} alt="coin-img" />
                 <div className={s.textContainerRightBoxText}>
                   <h4>All Inclusive Pricing</h4>
                   <p>
@@ -57,7 +75,9 @@ const ChooseUs = () => {
                 </div>
               </li>
               <li className={s.textContainerRightBox}>
-                <img src={box3} alt="coin-img" />
+                <img
+                  className={rightPartIsVivsible ? s.textContainerRightImgAnim : s.textContainerRightImg}
+                  src={box3} alt="coin-img" />
                 <div className={s.textContainerRightBoxText}>
                   <h4>No Hidden Charges</h4>
                   <p>

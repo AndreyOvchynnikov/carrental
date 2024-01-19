@@ -7,10 +7,15 @@ import s from './PlanTrip.module.css';
 
 const PlanTrip = () => {
 
-    const { ref, inView } = useInView({
+    const { ref: titleRef, inView: titleIsVisible } = useInView({
         triggerOnce: true,
         rootMargin: '-100px 0px',
     });
+
+    const { ref: imgRef, inView: imgIsVisible } = useInView({
+        triggerOnce: true,
+        rootMargin: '-100px 0px',
+    })
     
     return (
       
@@ -19,11 +24,11 @@ const PlanTrip = () => {
                 <div className={s.planContainer}>
                     <div className={s.planContainerTitle}>
                         <h3>Plan your trip now</h3>
-                        <h2 ref={ref} className={inView ? s.animationTitle : s.planSectionTitle}>Quick & easy car rental</h2>
+                        <h2 ref={titleRef} className={titleIsVisible ? s.animationTitle : s.planSectionTitle}>Quick & easy car rental</h2>
                     </div>
                     <div className={s.planContainerBoxes}>
-                        <div className={s.planContainerBoxesBox}>
-                            <img className={inView ? s.planContainerBoxesBoxImgRotate : s.planContainerBoxesBoxImg}
+                        <div ref={imgRef} className={s.planContainerBoxesBox}>
+                            <img className={imgIsVisible ? s.planContainerBoxesBoxImgRotate : s.planContainerBoxesBoxImg}
                                 src={SelectCar}
                                 alt="icon_img" />
                             <h3>Select Car</h3>
@@ -33,7 +38,7 @@ const PlanTrip = () => {
                             </p>
                         </div>
                         <div className={s.planContainerBoxesBox}>
-                            <img className={inView ? s.planContainerBoxesBoxImgRotate : s.planContainerBoxesBoxImg}
+                            <img className={imgIsVisible ? s.planContainerBoxesBoxImgRotate : s.planContainerBoxesBoxImg}
                                 src={Contact}
                                 alt="icon_img" />
                             <h3>Contact Operator</h3>
@@ -43,7 +48,7 @@ const PlanTrip = () => {
                             </p>
                         </div>
                         <div className={s.planContainerBoxesBox}>
-                            <img className={inView ? s.planContainerBoxesBoxImgRotate : s.planContainerBoxesBoxImg}
+                            <img className={imgIsVisible ? s.planContainerBoxesBoxImgRotate : s.planContainerBoxesBoxImg}
                                 src={Drive}
                                 alt="icon_img" />
                             <h3>Let's Drive</h3>

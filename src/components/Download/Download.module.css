@@ -8,7 +8,8 @@
   background-size: cover;
   width: 100%;
   height: auto;
-  padding: 10rem 0;
+  padding-top: 10rem;
+  padding-bottom: 6rem;
 }
 
 @media (max-width: 700px) {
@@ -23,6 +24,7 @@
   gap: 2rem;
   max-width: 55rem;
   text-align: left;
+  overflow: hidden;
 }
 
 @media (max-width: 700px) {
@@ -32,18 +34,52 @@
   }
 }
 
-.downloadText h2 {
+.downloadTextH2 {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.downloadTextH2Anim {
   font-size: var(--h2-size);
   color: var(--main-text-color);
+  opacity: 0;
+  transform: translateX(-50%);
+  animation: gotoright 1.5s forwards;
+}
+@keyframes gotoright {
+    0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
 }
 
-.downloadText p {
+.downloadTextP {
+  opacity: 0;
+  transform: translateX(50%);
+}
+.downloadTextPAnim {
   font-size: var(--p-size);
   color: var(--secondary-text-color);
   font-family: var(--text-font);
   line-height: 1.5;
+  opacity: 0;
+  transform: translateX(50%);
+  animation: gotoleft 1.5s forwards;
 }
 
+@keyframes gotoleft {
+    0% {
+    opacity: 0;
+    transform: translateX(50%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
 .downloadTextBtns {
   display: flex;
   gap: 3rem;
@@ -63,13 +99,35 @@
   }
 }
 
-.downloadTextBtns img {
-  width: 40%;
+.downloadTextBtnsImg {
+  width: 22rem;
   cursor: pointer;
+  margin-bottom: 4rem;
+}
+.downloadTextBtnsImgAnim {
+  width: 22rem;
+  cursor: pointer;
+  animation: wave 1.5s linear;
+  margin-bottom: 4rem;
 }
 
-@media (max-width: 550px) {
-  .downloadTextBtns img {
-    width: 22rem;
+@keyframes wave {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 20deg;
+  }
+  100% {
+    rotate: 0deg;
   }
 }
+
+/* @media (min-width: 550px) {
+  .downloadTextBtnsImg {
+    width: 40%;
+  }
+  .downloadTextBtnsImgAnim {
+      width: 40%;
+  }
+} */

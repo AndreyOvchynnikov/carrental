@@ -17,6 +17,7 @@
   width: 100%;
   height: 100%;
   align-items: center;
+  overflow: hidden;
 }
 
 .bannerContentText {
@@ -25,19 +26,57 @@
   gap: 1.5rem;
 }
 
-.bannerContentText h2 {
+.bannerTitle {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.bannerTitleAnim {
   font-size: var(--h1-size);
   line-height: 1.3;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: gotoright 1s forwards;;
+}
+
+@keyframes gotoright {
+    0% {
+    opacity: 0;
+    transform: translateX(-100%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
 }
 
 @media (max-width: 550px) {
-  .bannerContentText h2 {
+  .bannerTitleAnim {
     font-size: var(--h2-size);
   }
 }
 
-.bannerContentText p {
+.bannerText {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.bannerTextAnim {
+  opacity: 0;
+  transform: translateX(100%);
   font-size: var(--h3-size);
+  animation: gotoleft 1s forwards;
+}
+
+@keyframes gotoleft {
+    0% {
+    opacity: 0;
+    transform: translateX(100%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
 }
 
 @media (max-width: 550px) {

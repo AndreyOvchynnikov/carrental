@@ -42,8 +42,17 @@
   display: flex;
   flex-direction: column;
 }
+
+.pickWrapperAnim {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: gotoup 1.5s forwards;
+}
+
 .pickDescription {
-  width: 25rem;
+  width: 25rem; 
 }
 
 .pickDescriptionPrice {

@@ -9,6 +9,7 @@
 .testimonialsContent {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .testimonialsContentTitle {
@@ -20,37 +21,106 @@
   margin-bottom: 5rem;
 }
 
-.testimonialsContentTitle h4 {
+.testimonialsContentTitleH4 {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.testimonialsContentTitleH4Anim {
   font-size: var(--h4-size);
   font-family: var(--text-font);
   font-weight: 500;
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: gotodown 1.5s forwards;
 }
 
-.testimonialsContentTitle h2 {
+@keyframes gotodown {
+  0% {
+  opacity: 0;
+  transform: translateY(-100%);
+  }
+  100% {
+  opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+.testimonialsContentTitleH2 {
+  opacity: 0;
+  transform: translateX(-20%);
+}
+.testimonialsContentTitleH2Anim {
   font-size: var(--h2-size);
   margin-bottom: 1.4rem;
+  opacity: 0;
+  transform: translateX(-20%);
+  animation: gotoright 1.5s forwards;
 }
 
-.testimonialsContentTitle p {
+@keyframes gotoright {
+    0% {
+    opacity: 0;
+    transform: translateX(-20%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+.testimonialsContentTitleTextAnim {
   font-size: var(--p-size);
   font-family: var(--text-font);
   color: var(--secondary-text-color);
   line-height: 1.4;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: gotoup 1.5s forwards;
+}
+
+@keyframes gotoup {
+  0% {
+  opacity: 0;
+  transform: translateY(100%);
+  }
+  100% {
+  opacity: 1;
+  transform: translateY(0);
+  }
 }
 
 .allTestimonials {
+  opacity: 0;
+  transform: translateY(30%);
+}
+.allTestimonialsAnim {
   display: flex;
   gap: 3rem;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
-  padding: 3rem;
+  padding: 0;
   list-style: none;
+  opacity: 0;
+  transform: translateY(30%);
+  animation: gotoupTestimonials 1.5s forwards;
+  animation-delay: 0.5s;
 }
 
-@media (max-width: 1200px) {
-  .allTestimonials {
-    padding: 0;
+@keyframes gotoupTestimonials {
+  0% {
+  opacity: 0;
+  transform: translateY(30%);
+  }
+  100% {
+  opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+@media (min-width: 1200px) {
+  .allTestimonialsAnim {
+    padding: 3rem;
   }
 }
 
