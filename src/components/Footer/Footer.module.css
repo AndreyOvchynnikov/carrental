@@ -11,6 +11,7 @@
     color: var(--main-text-color);
     justify-content: center;
     gap: 8rem;
+    overflow: hidden;
 }
 .title {
     font-weight: 700;
@@ -25,19 +26,39 @@
     color: var(--main-theme-color);
 }
 
+
 .contacts {
-    display: flex;
-    flex-direction: column;
+    opacity: 0;
+    transform: translateX(-100%);
 }
 
-.contacts p {
+.contactsAnim {
+    opacity: 0;
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    animation: gotoright 1s forwards;
+}
+
+@keyframes gotoright {
+    0% {
+    opacity: 0;
+    transform: translateX(-100%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+.contactsAnim p {
     color: var(--secondary-text-color);
     font-size: 1.6rem;
     line-height: 1.7;
     margin-bottom: 3rem;
     text-align: left;
 }
-.contacts a {
+.contactsAnim a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,7 +76,18 @@
 .icon {
     margin-right: 1rem;
 }
-
+.company {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.companyAnim {
+    opacity: 0;
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    animation: gotoright 1s forwards;
+    animation-delay: 0.5s;
+}
 .companyList {
     list-style: none;
     font-size: var(--p-size);
@@ -72,18 +104,50 @@
             margin-bottom: 1rem;
         }
 }
+
 .working {
-    font-size: var(--p-size);
+    opacity: 0;
+    transform: translateX(100%);
 }
-.working p:not(:last-child) {
+
+.workingAnim {
+    font-size: var(--p-size);
+    opacity: 0;
+    transform: translateX(100%);
+    animation: gotoleft 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes gotoleft {
+    0% {
+    opacity: 0;
+    transform: translateX(100%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+.workingAnim p:not(:last-child) {
     margin-bottom: 1rem;
 }
+
 .subscription {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.subscriptionAnim {
     font-size: var(--p-size);
     max-width: 36rem;
     margin: 0 auto;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: gotoleft 1s forwards;
 }
-.subscription p {
+
+.subscriptionAnim p {
     margin-bottom: 1rem;
 }
 .footerForm {
@@ -128,10 +192,10 @@
         grid-template-rows: 1fr 1fr;
         gap: 8rem;
     }
-    .contacts a {
+    .contactsAnim a {
         justify-content: left;
     }
-    .subscription {
+    .subscriptionAnim {
         max-width: 100%;
         margin: 0;
     }  
