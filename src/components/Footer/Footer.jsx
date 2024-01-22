@@ -19,10 +19,11 @@ const Footer = () => {
 
   const toogleMessage = () => setShowFooterMessage(!showFooterMessage);
 
-  const { ref, inView } = useInView({
-    triggerOnce: false,
-    rootMargin: '200px 0px',
-  })
+  const animationOptions = {triggerOnce: false, rootMargin: "100px 0px 100px 0px",}
+  const { ref: contactsRef, inView: concactsIsVisible } = useInView(animationOptions);
+  const { ref: companyRef, inView: companyIsVisible } = useInView(animationOptions);
+  const { ref: workingRef, inView: workingIsVisible } = useInView(animationOptions);
+  const { ref: subscriptionRef, inView: subscriptionIsVisible } = useInView(animationOptions);
 
   return (
     <>
@@ -32,8 +33,8 @@ const Footer = () => {
         />}
       <footer className={s.footerSection}>
         <Container>
-          <div ref={ref} className={s.footerWpapper}>
-            <div className={inView? s.contactsAnim : s.contacts}>
+          <div className={s.footerWpapper}>
+            <div ref={contactsRef} className={concactsIsVisible? s.contactsAnim : s.contacts}>
               <h3 className={s.title}>Car R<span>ental</span></h3>
               <p>We offers a big range of vehicles for
                 all your driving needs.
@@ -48,7 +49,7 @@ const Footer = () => {
                 carrental@gmail.com
               </a>
             </div>
-            <div className={inView? s.companyAnim : s.company}>
+            <div ref={companyRef} className={companyIsVisible? s.companyAnim : s.company}>
               <h3 className={s.title}>Company</h3>
               <ul className={s.companyList}>
                 {companyLinks.map((item, index) => {
@@ -61,13 +62,13 @@ const Footer = () => {
                 })}
               </ul>
             </div>
-            <div className={inView? s.workingAnim : s.working}>
+            <div ref={workingRef} className={workingIsVisible? s.workingAnim : s.working}>
               <h3 className={s.title}>Working Hours</h3>
               <p>Mon - Fri: 9:00AM - 9:00PM</p>
               <p>Sat: 9:00AM - 19:00PM</p>
               <p>Sun: Closed</p>
             </div>
-            <div className={inView? s.subscriptionAnim : s.subscription}>
+            <div ref={subscriptionRef} className={subscriptionIsVisible? s.subscriptionAnim : s.subscription}>
               <h3 className={s.title}>Subscription</h3>
               <p>Subscribe your Email address for latest news & updates.</p>
               <form className={s.footerForm} onSubmit={handleSubmit}>
