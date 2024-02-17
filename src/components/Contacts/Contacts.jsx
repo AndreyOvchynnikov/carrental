@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IconMail, IconMailOpened, IconPhone, IconLocation } from "@tabler/icons-react";
 import Container from "components/Container";
 import ModalMessage from "components/ModalMessage";
@@ -10,6 +10,19 @@ const Contacts = () => {
     const [showQuestionMessage, setShowQuestionMessage] = useState(false);
     const toogleMessage = () => setShowQuestionMessage(!showQuestionMessage);
     const questionMessage = "Thank you for your question! We will contact you.";
+
+    useEffect(() => {
+    
+        if (showQuestionMessage) {
+            document.body.style.cssText = `
+            overflow: hidden;
+            padding-right: ${window.innerWidth - document.body.offsetWidth}px;
+        `
+            return;
+        };
+        document.body.style.cssText = '';
+    
+    }, [showQuestionMessage]);
 
     const handleSubmit = (event) => {
         event.preventDefault();

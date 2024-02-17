@@ -5,7 +5,19 @@
   padding: 10rem 0;
   background-size: auto;
   background-repeat: no-repeat;
-  background-position: 0 70%;
+  background-position: 0 50rem;
+}
+
+@media screen and (min-width: 410px) {
+    .faqSection {
+      background-position: 0 30rem;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .faqSection {
+      background-position: 0 20rem;
+    }
 }
 
 .faqContent {

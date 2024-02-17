@@ -9,11 +9,14 @@ import s from './BookCarModal.module.css';
 const BookCarModal = ({ bookInfo, toggleModal }) => {
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, []);
+        document.body.style.cssText = `
+            overflow: hidden;
+            padding-right: ${window.innerWidth - document.body.offsetWidth}px;
+        `;
+        return () => {
+            document.body.style.cssText = '';
+        };
+    }, []);
 
   const successMessage = "Check your email to confirm an order!";
   const [showBookModalMessage, setShowBookModalMessage] = useState(false);

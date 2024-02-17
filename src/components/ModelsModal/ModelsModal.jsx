@@ -7,9 +7,12 @@ import s from './ModelsModal.module.css';
 const ModelsModal = ({ toggleModelsModal }) => {
 
     useEffect(() => {
-        document.body.style.overflow = "hidden";
+        document.body.style.cssText = `
+            overflow: hidden;
+            padding-right: ${window.innerWidth - document.body.offsetWidth}px;
+        `;
         return () => {
-            document.body.style.overflow = "auto";
+            document.body.style.cssText = '';
         };
     }, []);
 
