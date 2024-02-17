@@ -20,7 +20,7 @@ const LogInModal = () => {
 
     const logInErrorMessage = "Error! Please check your login or password";
     const [showLogInMessage, setShowLogInMessage] = useState(false);
-    const toogleMessage = () => setShowLogInMessage(!showLogInMessage)
+    const toogleMessage = () => setShowLogInMessage(!showLogInMessage);
 
     const logInModalSubmit = async (event) => {
         
@@ -31,7 +31,8 @@ const LogInModal = () => {
             setIsLoading(false);
             toogleMessage();
         }
-    }
+    };
+
 
     return (
         <>
@@ -51,7 +52,7 @@ const LogInModal = () => {
                     <form onSubmit={logInModalSubmit} className={s.form}>
                         <label className={s.label}>
                             Email <b>*</b>
-                            <input
+                            <input 
                                 type="email"
                                 name="email"
                                 placeholder="Your email"

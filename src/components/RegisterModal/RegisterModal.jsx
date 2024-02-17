@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { IconX } from "@tabler/icons-react";
 import { useAuthContext } from 'components/context/authContext';
 import ModalMessage from 'components/ModalMessage';
@@ -22,6 +22,10 @@ const RegisterModal = () => {
     const [showRegisterMessage, setShowRegisterMessage] = useState(false);
     const toogleMessage = () => setShowRegisterMessage(!showRegisterMessage);
 
+    const [isModalBtnDisabled, setIsModalBtnDisabled] = useState(true);
+    const inputPassword = useRef();
+    const inputConfirmPassword = useRef();
+
     const registerModalSubmit = async (event) => {
         try {
             await registerSubmit(event);
@@ -30,6 +34,16 @@ const RegisterModal = () => {
             setIsLoading(false);
             toogleMessage();
         }
+    };
+
+    const handleChangePassword = (event) => {
+        if (inputPassword.current.value === inputConfirmPassword.current.value
+            && event.target.value.length >= 8
+        ) {
+            setIsModalBtnDisabled(false);
+            return;
+        };
+        setIsModalBtnDisabled(true);
     };
     
     return (
@@ -76,6 +90,8 @@ const RegisterModal = () => {
                         <label className={s.label}>
                             Password <b>*</b>
                             <input
+                                ref={inputPassword}
+                                onChange={handleChangePassword}
                                 type="password"
                                 name="password"
                                 placeholder="Should be at least 8 characters"
@@ -86,7 +102,22 @@ const RegisterModal = () => {
                             />
                             <span>This field is required.</span>
                         </label>
-                        <button type="submit" className={s.formButton}>Create account</button>
+                        <label className={s.label}>
+                            Confirm password <b>*</b>
+                            <input
+                                ref={inputConfirmPassword}
+                                onChange={handleChangePassword}
+                                type="password"
+                                name="password"
+                                placeholder="Should be at least 8 characters"
+                                aria-label="Input for your password"
+                                minLength="8"
+                                className={s.input}
+                                required
+                            />
+                            <span>This field is required.</span>
+                        </label>
+                        <button type="submit" disabled={isModalBtnDisabled} className={s.formButton}>Create account</button>
                     </form>
                 </div>
             </div>

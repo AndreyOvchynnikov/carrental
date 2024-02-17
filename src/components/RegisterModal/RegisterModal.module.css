@@ -92,7 +92,10 @@
   margin-bottom: 2rem;
 }
 
-.formButton:hover {
-  background-color: #fe3516;
+
+.formButton:disabled {
+  background-color: gray;
+  color: #dbdbdb;
+  border: 1px solid gray;
 }
 
